@@ -18,11 +18,12 @@
     <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a href="{% url 'home' %}" class="navbar-brand">PyShop</a>
+         <a href="{% url 'signup' %}" class="navbar-brand">Sign Up</a>
        <a href="{% url 'create-product' %}" class="navbar-brand">
            <img style="width: 20px; height: auto;" src="{% static 'img/plus.png' %}"></a>
 
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="d-flex" method="get" action="{% url 'search' %}">
+      <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
   </div>

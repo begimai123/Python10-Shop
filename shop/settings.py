@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # my apps
     'product',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -82,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'pyshop_db1',
-        'USER': 'kani',
-        'PASSWORD': '1',
+        'USER': 'test_user',
+        'PASSWORD': 'Begimai123@',
         'HOST': 'localhost',
         'PORT': 5432
     }
