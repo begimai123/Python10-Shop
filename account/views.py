@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.db import models
@@ -12,4 +13,12 @@ class RegisterView(CreateView):
     template_name = 'account/registration.html'
     form_class = RegistrationForm
     success_url = reverse_lazy('home')
+
+class SignInView(LoginView):
+    template_name = 'account/login.html'
+    success_url = reverse_lazy('home')
+
+
+
+
 

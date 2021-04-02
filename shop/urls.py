@@ -23,7 +23,8 @@ from product.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('product.urls')),
-    path('account/', include('account.urls'))
+    path('account/', include('account.urls')),
+    path('', include('product.cart_urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -18,6 +18,7 @@
           {% else %}
           <p style="color: blue;" class="card-text">Ожидается</p>
      {% endif %}
+          <a href="{% url 'cart_add' product.id %}">Add To Cart</a>
       </div>
     </div>
   </div>
